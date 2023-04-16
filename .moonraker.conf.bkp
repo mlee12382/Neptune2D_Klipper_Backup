@@ -20,6 +20,11 @@ cors_domains =
 	https://app.fluidd.xyz
 	http://app.fluidd.xyz
 
+[database]
+
+[file_manager]
+enable_object_processing = True
+
 [octoprint_compat]
 
 [history]
