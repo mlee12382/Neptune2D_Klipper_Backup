@@ -49,7 +49,7 @@ path = ~/fluidd
 type = git_repo
 path = ~/moonraker-obico
 origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
-env = /home/pi/moonraker-env/bin/python
+env = /home/pi/moonraker-obico-env/bin/python
 requirements = requirements.txt
 install_script = install.sh
 managed_services = 
@@ -123,4 +123,28 @@ type = git_repo
 path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
+
+[update_manager mainsail-config]
+type = git_repo
+primary_branch = master
+path = ~/mainsail-config
+origin = https://github.com/mainsail-crew/mainsail-config.git
+managed_services = klipper
+
+[update_manager fluidd-config]
+type = git_repo
+primary_branch = master
+path = ~/fluidd-config
+origin = https://github.com/fluidd-core/fluidd-config.git
+managed_services = klipper
+
+[update_manager mobileraker]
+type = git_repo
+path = /home/pi/mobileraker_companion
+origin = https://github.com/Clon1998/mobileraker_companion.git
+primary_branch = main
+managed_services = mobileraker
+env = /home/pi/mobileraker-env/bin/python
+requirements = scripts/mobileraker-requirements.txt
+install_script = scripts/install-mobileraker-companion.sh
 
