@@ -124,19 +124,11 @@ path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
 
-[update_manager mainsail-config]
+[update_manager pa_cal]
 type = git_repo
-primary_branch = master
-path = ~/mainsail-config
-origin = https://github.com/mainsail-crew/mainsail-config.git
-managed_services = klipper
-
-[update_manager fluidd-config]
-type = git_repo
-primary_branch = master
-path = ~/fluidd-config
-origin = https://github.com/fluidd-core/fluidd-config.git
-managed_services = klipper
+path = ~/klipper-pa_cal
+origin = https://github.com/ksanislo/klipper-pa_cal.git
+is_system_service = False
 
 [update_manager mobileraker]
 type = git_repo
